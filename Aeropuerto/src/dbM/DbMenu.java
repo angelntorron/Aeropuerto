@@ -225,6 +225,7 @@ public class DbMenu{
 		 break;
 		 
 		case 2:
+			List<Aerolinea> a1=gestor.se
 			 break;
 		case 3:
 			List<Modelo> modelo1=gestor.selectModelo();

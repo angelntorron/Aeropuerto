@@ -254,17 +254,47 @@ public class DbManager {
 			e.printStackTrace();
 		}
 		
+		}
+	public List<Aerolinea> selectAerolinea(){
+		List<Aerolinea> ListaAerolinea=new ArrayList<Aerolinea>();
+		try{
+		Statement estatemento=c.createStatement();
+		
+		String sql="Select * from Aerolinea";
+		ResultSet rs=estatemento.executeQuery(sql);
+		while(rs.next()){
+			int id=rs.getInt(id);
+			String nacionalidad=rs.getString("nacionalidad");
+		}
+		
+		}
+	
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
+	
+	/*public List<Modelo> selectModelo() {
 
-}
+		List<Modelo> ListaModelo = new ArrayList<Modelo>();
+		try {
 
-}
+			Statement stm1 = c.createStatement();
+
+			String sql = "Select * from MODELO";
+			ResultSet rs = stm1.executeQuery(sql);
+			while (rs.next()) {
+				int id=rs.getInt("id");
+				int capacidad = rs.getInt("capacidad");
+				String asiento = rs.getString("asiento");
+				String nombre = rs.getString("nombre");
+
+				Modelo m1 = new Modelo(id, capacidad, nombre, asiento);
+				ListaModelo.add(m1);
+			}
+			c.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return ListaModelo;
+	}
+	*/
+	}
